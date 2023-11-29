@@ -1,0 +1,77 @@
+//reset
+
+body {
+	margin: 0;
+	width: 100%;
+}
+
+//colori
+
+$main-font-color: #f4f4f4;
+
+$btn-blue: #0e6cff;
+
+$btn-yellow: #ff8700;
+
+$btn-green: #4caf50;
+
+$bg-hero: #640fc5;
+
+//font
+
+$main-font: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+$font-weigth-normal: 400;
+
+$font-weigth-bold: 700;
+
+$font-size-main: 1rem;
+
+$font-size-big: 4rem;
+
+@mixin title-big() {
+	font-family: $main-font;
+	font-weight: $font-weigth-bold;
+	color: $main-font-color;
+	font-size: $font-size-big;
+}
+
+.titoloGrande {
+	@include title-big();
+}
+
+//spacings
+
+@for $i from 1 through 6 {
+	.custom-padding-block-#{$i} {
+		padding-block: $i * 10px;
+	}
+}
+
+@for $i from 1 through 6 {
+	.custom-padding-inline-#{$i} {
+		padding-inline: $i * 10px;
+	}
+}
+
+@for $i from 1 through 6 {
+	.custom-margin-block-#{$i} {
+		margin-block: $i * 10px;
+	}
+}
+
+@for $i from 1 through 6 {
+	.custom-margin-inline-#{$i} {
+		margin-inline: $i * 10px;
+	}
+}
+
+//buttons
+
+$colorKeys: $btn-blue, $btn-yellow, $btn-green;
+
+@each $elem in $colorKeys {
+	.buttonColor-#{elem} {
+		background-color: $elem;
+	}
+}
